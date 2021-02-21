@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[a5paper,margin=10mm,bottom=15mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Segoe UI}
+
+
+\usepackage{xcolor}
+\begin{document}
+Let't begin with some python source code. An import statement and a function declaration. Syntax highlight:
+
+\begin{verbatim}
+# Python source code with `verbatim`
+import numpy as np
+def incmatrix(genl1,genl2):
+  m = len(genl1)
+  n = len(genl2)
+  M = None #to become the incidence matrix
+  VT = np.zeros((n*m,1), int) #dummy variable
+  #compute the bitwise xor matrix
+  M1 = bitxormatrix(genl1)
+  M2 = np.triu(bitxormatrix(genl2),1)
+\end{verbatim}
+
+
+\begin{flushleft}
+\fontspec{Consolas}
+{\color{gray}{\textit{\# Syntax highlighted with plain \Large{\LaTeX}}}}\\
+\textbf{\textit{import}} numpy \textbf{\textit{as}} np\\
+\textbf{\emph{def}} incmatrix\textbf{(}genl1,genl2\textbf{)}\textbf{:}\\
+\ \ m \textbf{=} \textbf{\emph{len}}\textbf{(}genl1\textbf{)}\\
+\ \ n \textbf{=} \textbf{\emph{len}}\textbf{(}genl2\textbf{)}\\
+\ \ M \textbf{=} \textbf{\emph{None}} {\color{gray}{\textit{\#to become the incidence matrix}}}\\
+\ \ VT \textbf{=} np\textbf{.}zeros\textbf{(}\textbf{(}n\textbf{*}m\textbf{,}\textbf{1}\textbf{)}\textbf{,} \textbf{int}\textbf{)} \textit{\color{gray}\#dummy variable}\\
+\ \ \textit{\color{gray}\#compute the bitwise xor matrix}\\
+\ \ M1 \textbf{=} bitxormatrix\textbf{(}genl1\textbf{)}\\
+\ \ M2 \textbf{=} np\textbf{.}triu\textbf{(}bitxormatrix\textbf{(}genl2\textbf{)}\textbf{,}\textbf{1}\textbf{)}\\
+\end{flushleft}
+
+
+\end{document}
