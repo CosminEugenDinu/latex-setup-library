@@ -1,5 +1,5 @@
 # Setup LaTeX in Windows + WSL (Ubuntu)
-Mini-framework used as starting point for document creation with LaTeX typesetting system. Contains an example of calling an external program from within a `.tex` document, retrieving it’s standard output and compiling the resulting document to `pdf`. More specifically `dynamic-syntax-highlight.tex` calls the python program `syntax_highlight.py` - a simple code parser - that returns formatted latex text with highlighting theme applied. Examples can be found in `built` folder.
+Mini-framework used as starting point for document creation with LaTeX typesetting system. Contains an example of calling an external program from within a `.tex` document, retrieving it’s standard output and compiling the resulting document to `pdf`. More specifically `dynamic-syntax-highlight.tex` calls the python program `syntax_highlight.py` - a simple code parser - that returns formatted latex text with highlighting theme applied (i.e. write documentation in LaTeX that require code snippets). Examples can be found in `built` folder.
 
 ### Install pdflatex (file.tex -> file.pdf)
 ```bash
