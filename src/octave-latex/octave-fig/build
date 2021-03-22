@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This executable compiles .m script-files (mathlab, octave)
+# .eps can be used inside .tex script-file.
+
+octave-cli $1
