@@ -1,10 +1,13 @@
 #!/bin/bash
 
+root_dir="$(realpath "${0%/*}")"
 latex_file="$(realpath "$1")"
 latex_filename="${latex_file##*/}"
 filename_without_ext="${latex_filename%.*}"
 
-cd tmp
+mkdir 'tmp' 1>/dev/null 2>&1
 xelatex -shell-escape -interaction=nonstopmode "${latex_file}"
-mv -v "${filename_without_ext}.pdf" ../built
+mv -v "${filename_without_ext}.pdf" "${root_dir}/built"
+mv "${filename_without_ext}.aux" 'tmp'
+mv "${filename_without_ext}.log" 'tmp'
 
