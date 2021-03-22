@@ -1,6 +1,6 @@
 {
     "code-runner.executorMapByFileExtension": {
-        ".tex": "./compile_latex src/$fileName && open built/$fileNameWithoutExt.pdf",
+        ".tex": "cd $dir && $workspaceRoot/compile_latex $fileName && open $workspaceRoot/built/$fileNameWithoutExt.pdf",
         // ".py": "./compile_latex src/hello.tex && open built/hello.pdf"
         // ".tex": "pdflatex -shell-escape $fileName && open $fileNameWithoutExt.pdf"
     },
