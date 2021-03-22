@@ -1,9 +1,9 @@
 x = 0:0.01:3;
 hf = figure ();
 set (0,'defaultaxesfontsize', 14)
-plot (x, erf (x));
+plot (x, erf (x), 'linewidth', 5);
 hold on;
-plot (x, x, "r");
+plot (x, x, 'r', 'linewidth', 3);
 axis ([0, 3, 0, 1]);
 xlabel ("x");
 ylabel ("erf (x)");
