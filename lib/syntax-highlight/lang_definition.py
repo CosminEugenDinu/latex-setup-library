@@ -27,6 +27,7 @@ py = {
     "def": {"typ": "keyword", "end": " ("},
     "in": {"typ": "keyword", "end": " "},
     "is": {"typ": "keyword", "end": " "},
+    "return": {"typ": "keyword", "end": " "},
     "for": {"typ": "keyword", "end": " "},
     "and": {"typ": "keyword", "end": " ("},
     "or": {"typ": "keyword", "end": " ("},

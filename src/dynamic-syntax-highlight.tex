@@ -8,30 +8,34 @@
 
 Dynamic syntax highlighting. \\
 
-
 \newcommand{\code}[2][]{
     % input require compile flag -shell-escape
     \fontspec{Consolas}
-    \scriptsize
     \input{|../lib/syntax-highlight/syntax_highlight.py #1 '../src/dynamic-syntax-highlight.tex'}
 }
 
+****** First python snippet: *****
+\small
 \code['Hello World Program.py']{
-re_ends = [re.compile('%s$'%cond) for cond in end_conditions]
+def _get_definition(language, lang_definition):
+    if language == 'py': return lang_definition.py
+    if language == 'js': return lang_definition.js
 }{}
 
+***** Second python snippet: *****
+\small
 \code[snip.py]{
-'single quotes string'
-"double quotes string"
-'''triple single quotes string'''
-"""triple double quotes string""" 
-str_len-len(str("some string"))
-x = [1,2,3]
-2*3-len(x) | str(len(x)) alen(y) len(x) len (y) len(str(s)) 
-def func:
-    print("ceva")
-    print('altceva')
+def highlight(words, language, theme):
+    if language == 'py': lang_theme = theme.py
+    if language == 'js': lang_theme = theme.js
 
+    highlighted_words = []
+    for word, typ in words:
+        latex_escaped = [] 
+        for char in word:
+            latex_escaped.append(theme.latex_escape.get(char, char))
+        highlighted_words.append(lang_theme[typ] % ''.join(latex_escaped))
+    return ''.join(highlighted_words)
 }{}
 
 \end{document}
