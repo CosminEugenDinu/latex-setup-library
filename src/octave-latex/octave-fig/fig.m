@@ -9,7 +9,8 @@ xlabel ("x");
 ylabel ("erf (x)");
 title ("erf (x) with text annotation");
 # Show some custom points on X axis 
-set(gca(), 'xtick', [0.5 1 2]);
+set(gca(), 'xtick', [0.5 1 2 ]);
+set(gca(), 'ytick', [1 3])
 text (0.65, 0.6175, strcat ('\leftarrow x = {2/\surd\pi',
 ' {\fontsize{16}\int_{\fontsize{8}0}^{\fontsize{8}x}}',
 ' e^{-t^2} dt} = 0.6175'));
