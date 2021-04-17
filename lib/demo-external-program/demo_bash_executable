@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# This is an example executable program
+
+this_program=$0
+first_arg=$1
+sec_arg=$2
+
+printf 'This program \\textbf{%s} can be called from within .tex document.\\\\ ' "${this_program//_/\\_}"
+printf 'First argument: \\textbf{%s}\\\\' "${first_arg}"
+printf 'Second argument: \\textbf{%s}\\\\' "${sec_arg}"

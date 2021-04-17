@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[a5paper,margin=5mm,bottom=15mm]{geometry}
+
+\begin{document}
+This document is a demonstration of calling external program with arguments and retrieve it's output.
+
+\LaTeX code used:
+\small\small
+\begin{verbatim}
+% command \external takes tow parameters
+% call it like this: \external{param1}{param2}
+\newcommand{\external}[2]{
+    % input require compile flag -shell-escape
+    \input{|../lib/demo-external-program/demo_bash_executable #1 #2}
+}
+
+Output from external program:\\\\
+\small
+\external{param1}{param2}
+    
+\end{verbatim}
+
+% command \external takes tow parameters
+% call it like this: \external{param1}{param2}
+\newcommand{\external}[2]{
+    % input require compile flag -shell-escape
+    \input{|../lib/demo-external-program/demo_bash_executable #1 #2}
+}
+
+Output from external program:\\\\
+\small
+\external{param1}{param2}
+
+\end{document}
