@@ -34,25 +34,15 @@ code --install-extension formulahendry.code-runner
 ```bash
 git clone https://github.com/CosminEugenDinu/latex-setup-library.git
 ```
-
-### Create project settings
+### Go to project root and open VSCode
 ```bash
-mkdir .vscode
-echo "
-{
-  "code-runner.executorMapByFileExtension": {
-    ".tex": "pdflatex -interaction=nonstopmode $fileName"
-    },  
-    "code-runner.runInTerminal": true,
-    "latex-workshop.latex.autoBuild.run": "never",
-}
-" > .vscode/settings.json
+cd latex-setup-library
+code .
 ```
-### Create and edit .tex file and compile it with Ctrl+Alt+N
 
-## Watch pdf on Windows side with SumatraPDF
-https://www.sumatrapdfreader.org/free-pdf-reader.html
+### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N`
 
-### [Install and use custom fonts](docs/custom-fonts.md)
-### [Execute external program from `tex` document](docs/execute-external-program.md)
-### [Additional documentation](docs/additional-documentation.md)
+### Documentation:
+- [Install and use custom fonts](docs/custom-fonts.md)
+- [Execute external program from `tex` document](docs/execute-external-program.md)
+- [Additional documentation](docs/additional-documentation.md)
