@@ -1,12 +1,12 @@
 {
+    "code-runner.runInTerminal": true,
+    "code-runner.respectShebang": false,
     "code-runner.executorMapByFileExtension": {
-        ".tex": "cd $dir && $workspaceRoot/compile_latex $fileName && open $workspaceRoot/built/$fileNameWithoutExt.pdf",
-        // ".py": "./compile_latex src/hello.tex && open built/hello.pdf"
-        // ".tex": "pdflatex -shell-escape $fileName && open $fileNameWithoutExt.pdf"
+        ".tex": "cd $dir && $workspaceRoot/compile_latex $fileName && $workspaceRoot/tools/w_open $workspaceRoot/built/$fileNameWithoutExt.pdf",
     },
     "code-runner.executorMap": {
         // "python": "./compile_latex src/hello.tex && open built/dynamic-syntax-highlight.pdf"
         "python": "python3 lib/syntax-highlight/$fileName 'Hello World Program.py' src/dynamic-syntax-highlight.tex"
     },
-    "code-runner.respectShebang": false
+    "latex-workshop.latex.autoBuild.run": "never",
 }
