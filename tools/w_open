@@ -1,0 +1,16 @@
+#!/bin/bash
+# Open first argument with appropriate Windows program
+
+w_sumatrapdf() {
+  w_file_path="$(wslpath -w "$1")"
+  (cmd.exe /c start "" "SumatraPDF.exe" "${w_file_path}" &) > /dev/null 2>&1
+}
+
+#####################################################
+# if no arguments, read from stdin, otherwise arg1
+(( $# == 0 )) && filepath="$(cat)" || filepath="$1"
+
+# get extension from filename
+ext="$(echo "${filepath}" | sed -r "s/^.+\.//" -)"
+
+[[ "${ext}" == "pdf" ]] && w_sumatrapdf "${filepath}"
