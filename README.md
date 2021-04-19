@@ -39,7 +39,8 @@ git clone https://github.com/CosminEugenDinu/latex-setup-library.git
 cd latex-setup-library && code .
 ```
 
-### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N`
+### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N`.
+Compiled `pdf` files are located in `built` folder.
 
 ### Documentation:
 - [Install and use custom fonts](docs/custom-fonts.md)
