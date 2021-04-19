@@ -36,8 +36,7 @@ git clone https://github.com/CosminEugenDinu/latex-setup-library.git
 ```
 ### Go to project root and open VSCode
 ```bash
-cd latex-setup-library
-code .
+cd latex-setup-library && code .
 ```
 
 ### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N`
