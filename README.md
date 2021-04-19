@@ -5,7 +5,7 @@ Mini-framework used as starting point for document creation with LaTeX typesetti
 Using [Chocolatey](https://chocolatey.org/install), open `PowerShell` with elevated permissions (right click -> `Run as administrator`).
 - Edit `.tex` source files with [VSCode](https://code.visualstudio.com/docs/remote/wsl):
 ```ps
-choco install vscode
+choco install vscode -y
 ```
 - Watch real time compiled pdf's with [SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader):
 ```ps
