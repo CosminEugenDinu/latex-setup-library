@@ -2,7 +2,8 @@
 Mini-framework used as starting point for document creation with LaTeX typesetting system. Contains an example of calling an external program from within a `.tex` document, retrieving it’s standard output and compiling the resulting document to `pdf`. More specifically `dynamic-syntax-highlight.tex` calls the python program `syntax_highlight.py` - a simple code parser - that returns formatted latex text with highlighting theme applied (i.e. write documentation in LaTeX that require code snippets). Examples can be found in `built` folder.
 
 ### Windows Prerequisites
-Using [Chocolatey](https://chocolatey.org/install), open `PowerShell` with elevated permissions (right click -> `Run as administrator`).
+Using [Chocolatey](https://chocolatey.org/install), open `PowerShell` or `cmd.exe` with elevated permissions (right click -> `Run as administrator`).
+Another way is to run as administrator from regular `cmd.exe`: `runas /user:administrator "choco install <program>"` (Administrator user must have set a password).
 - Edit `.tex` source files with [VSCode](https://code.visualstudio.com/docs/remote/wsl):
 ```ps
 choco install vscode -y
@@ -39,7 +40,7 @@ git clone https://github.com/CosminEugenDinu/latex-setup-library.git
 cd latex-setup-library && code .
 ```
 
-### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N`.
+### Create and edit `.tex` files in `src` folder and compile with `Ctrl+Alt+N` from within *VSCode*.
 Compiled `pdf` files are located in `built` folder.
 
 ### Documentation:
